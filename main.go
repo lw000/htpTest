@@ -95,6 +95,7 @@ func createHttpClient() *http.Client {
 			}).DialContext,
 			MaxConnsPerHost: 50,
 			MaxIdleConns:    50,
+			IdleConnTimeout: 90 * time.Second,
 		},
 		Timeout: 15 * time.Second,
 	}
